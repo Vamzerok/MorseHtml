@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morze</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <!--<input type="text" name="input" id="input">
+    <button onclick="main()">Fordít</button>-->
+    
+    <div id="fordito">
+        <div id="text"><textarea /*type="text"*/ id="input" ></textarea></div>
+        <div id ="translaterButton"></div>
+        <div id="morse"></div>
+    </div>
+
+    <script>
+        function setTranslateDiv(){
+            // window size
+            const h = window.innerHeight
+            const w = window.innerWidth
+
+            // div
+            const divH = h/2
+            const divW = w / 1.5
+
+            const div = document.getElementById('fordito')
+            
+            const divPosH = (h / 2) - (divH / 2) + 'px'
+            const divPosW = (w / 2) - (divW / 2) + 'px'
+
+            div.style.backgroundColor= 'green'
+            div.style.top = divPosH
+            div.style.left =  divPosW
+            div.style.height = divH + 'px'
+            div.style.width = divW + 'px'
+
+            // text
+
+            //70
+            const input = document.getElementById('input')
+            input.style.height = (divH - 70) / 2
+
+
+
+
+            // button
+
+            //morse
+        }
+
+
+        setTranslateDiv()
+
+        window.addEventListener('resize', setTranslateDiv)
+    </script>
+
+    
+</body>
+</html>

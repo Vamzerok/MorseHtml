@@ -1,0 +1,22 @@
+#fordito{
+    position: absolute;
+    background-image: linear-gradient(to top left, #93A5CF , #E4EfE9);
+    border-radius: 30px;
+}  
+#text{
+    margin: 30px;
+    display: flex;
+    /*position: absolute;*/
+}
+#input{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+body{
+    background-image: linear-gradient(to bottom right, #02AABD, #00CDAC);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
