@@ -1,0 +1,25 @@
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; color: inherit;}
+a:hover { text-decoration: none; color: inherit;}
+a:active { text-decoration: none; }
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
+    font-weight: inherit; /* Use the default font weight */
+    /* Add more properties if needed */
+  }
+
+
+.full-height {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.spacer div{
+    height: 50px;
+    background-image: url(kepek/carbon-stripe.png);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+

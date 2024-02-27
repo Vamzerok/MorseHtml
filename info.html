@@ -8,45 +8,87 @@
 
   <link rel="icon" href="icon.png">
   <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="info-style.css" rel="stylesheet">
   <link href="cover.css" rel="stylesheet">
 
   <title>Morze</title>
 </head>
 <body class="text-center">
-  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-
-    <!-- Header -->
-    <header class="masthead mb-auto">
-      <div class="inner">
-        <h3 class="masthead-brand">Morze</h3>
-        <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="index.html">Home</a>
-          <a class="nav-link" href="translate.html">Fordító</a>
-          <a class="nav-link" href="info.html">Információ</a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Tudja a rak -->
-    <main role="main" class="inner cover">
-      <h1 class="cover-heading">Morze fordító</h1>
-      <p class="lead">Alakítsd át üzeneteidet a pontok és kötőjelek időtlen nyelvére intuitív Morse-kód generátorunkkal. Akár kezdő, akár profi vagy, fedezd fel ennek a klasszikus kommunikációs eszköznek az egyszerűségét és sokoldalúságát.
-      </p>
-      <p class="lead">
-        <a href="translate.html" class="btn btn-lg btn-secondary">Irány a fordító 😀</a>
-      </p>
-    </main>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <h3>Morze</h3>
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="translate.html">Fordító</a>
+        <a class="nav-link" href="info.html">Információ</a>
+    </nav>
+    <div class="container-fluid">
+        <!--eslo sor-->
+        <div class="row full-height" id="first-row">
+          <div class="col-lg-12">
+            <h1 class="cover-heading">Információk</h1>
+            <p class="lead">Alakítsd át üzeneteidet a pontok és kötőjelek időtlen nyelvére intuitív Morse-kód generátorunkkal. Akár kezdő, akár profi vagy, fedezd fel ennek a klasszikus kommunikációs eszköznek az egyszerűségét és sokoldalúságát.
+            </p>
+          </div>
+        </div>
+        <!--spacer-->
+        <div class="row spacer">
+            <div class="col-lg-12"></div>
+        </div>
+        <!--masodik sor-->
+        <div class="row">
+            <!--pilotak kepek-->
+            <div class="col-lg-5 index-card-div">
+                <div class="col-lg-5" style="
+                background-image: url('osdvéklysdfkansdfg.jpg');
+                background-size: cover;">
+            </div>
+            </div>
+            <!--pilotak szoveg-->
+            <div class="col-lg-7" id="pilotak">
+                <h1>Története</h1>
+                <div>
+                    <p>The history of Morse code traces back to the early 1830s when Samuel Morse,
+                         alongside Alfred Vail, sought to create a more efficient means of long-distance 
+                         communication. Building upon earlier developments in telegraphy, Morse and Vail
+                          devised a system of dots and dashes to represent letters, numbers, and punctuation
+                           marks. This binary system allowed messages to be transmitted quickly and accurately
+                            over telegraph wires, marking a significant milestone in the history of communication 
+                            technology. The widespread adoption of Morse code facilitated unprecedented connectivity,
+                             shaping the course of human interaction and technological progress for generations to come.
+                    </p>
+                </div>
+            </div>
+        </div>
     
-    <!-- Footer -->
-    <footer class="mastfoot mt-auto">
-      <div class="inner">
-        <p>Készítők <br>Varga Dávid (Cigi) | Verhás Gergő | Császár Bálint</p>
-      </div>
-    </footer>
-
-  </div>
-  <!-- Bootstrap core JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->  
+        <div class="row spacer">
+            <div class="col-lg-12"></div>
+        </div>
+    
+        <div class="row">
+            <div class="col-lg-7" id="pilotak">
+                <h1>Samuel Morse</h1>
+                <div>
+                    <p>Samuel Morse, born on April 27, 1791, in Charlestown, 
+                        Massachusetts, was not only an accomplished inventor 
+                        but also a respected painter. Despite initially pursuing
+                         a career in art, Morse's life took a significant turn
+                          when he became interested in electricity and telegraphy. 
+                          His curiosity led him to develop the single-wire telegraph 
+                          system and Morse code, which revolutionized communication worldwide.
+                           Morse's relentless dedication to innovation and his collaboration
+                            with Alfred Vail laid the foundation for modern telecommunications, 
+                            earning him a lasting legacy as one of history's pioneering inventors.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5" style="
+            background-image: url('samuel-morse.jpg');
+            background-size: cover;">
+            </div>
+        </div>
+        
+        <div class="row spacer">
+            <div class="col-lg-12"></div>
+        </div>
+    </div>
 </body>
 </html>
