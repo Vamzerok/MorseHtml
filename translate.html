@@ -5,22 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morze</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="morze.css">
     <script src="morze.js"></script>
 </head>
 <body>
-    <div id="cim"><h1>Morze kód fordító</h1></div>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <!--header-->
+    <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Morze</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="translate.html">Fordító</a>
+            <a class="nav-link" href="info.html">Információ</a>
+          </nav>
+        </div>
+      </header>
     
+    <!--dinamic div contains the whole translator-->
     <div id="fordito">
+        <!--input div-->
         <div id="text" contenteditable="true" onkeypress="enter(event)" onclick="startType()"></div>
+
+        <!--div for the 2 buttons-->
         <div id ="button">
-            <button id="fordit" onclick="convertToMorse()">Fordít</button><!--converter button-->
+            <!--converter button-->
+            <button id="fordit" onclick="convertToMorse()">Fordít</button>
+            <!--copy morse code button-->
             <button id="copy" onclick="copy()" title="copy morse code">&#128464</button>
         </div>
+
+        <!--output div-->
         <div id="morse">Morze kód:</div>
     </div>
 
+    <!--footer-->
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Készítők <br>Varga Dávid (Cigi) | Verhás Gergő🧏‍♂️ | Császár Bálint</p>
+        </div>
+      </footer>
+    </div>
+
+
     <script>
+        //set the translater div's height and width according to window size
         function setTranslateDiv(){
             // window size
             const h = window.innerHeight
@@ -35,49 +65,24 @@
             const divPosH = (h / 2) - (divH / 2) + 'px'
             const divPosW = (w / 2) - (divW / 2) + 'px'
 
-           // div.style.backgroundColor= 'green'
             div.style.top = divPosH
             div.style.left =  divPosW
             div.style.height = divH + 'px'
             div.style.width = divW + 'px'
 
             // text
-
-            console.log(divPosH, divPosW)
             const text = document.getElementById('text')
             text.style.height = divH / 2 - 50 + 'px'
             
-            console.log((divPosH / 2) - 25 + 'px')
-            
-
-
-
-            // button
-            /*
-            const fordit = document.getElementById('fordit')
-            fordit.style.top = 50 + '%'
-            fordit.style.left = 50 + '%'  */
-
-            //morse
         }
 
-
-
-        var ran = false
+        //gives a start text to the input div
         function inputDiv(){
             const text = document.getElementById('text')
             text.innerText = "Kattints a szöveg beírásához!"
-            console.log(ran)/*
-            if(ran === false){
-                console.log(ran)
-                text.addEventListener('click', () =>{
-                text.innerText = ''
-                ran = true
-                console.log(ran)
-                
-            })}*/
-        
         }
+
+        //deletes the starting text in input div if you first click in
         function startType(){
             const text = document.getElementById('text')
             text.innerText = ""
@@ -90,6 +95,7 @@
         setTranslateDiv()
         inputDiv()
 
+        //event listener for the window size
         window.addEventListener('resize', setTranslateDiv)
     </script>
 
