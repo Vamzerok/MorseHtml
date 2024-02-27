@@ -1,0 +1,49 @@
+#fordito{
+    position: absolute;
+    background-image: linear-gradient(to top left, #93A5CF , #E4EfE9);
+    border-radius: 30px;
+}  
+#text{
+    margin: 30px;
+    display: flex;
+    /*position: absolute;*/
+    font-size: large;
+}
+#cim{
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    padding-top: 2%;
+    text-align: center;
+    left: calc(50% - 150px);
+    color: white;
+    
+}
+#morse{
+    margin: 30px;
+    display: flex;
+    font-size: large;
+}
+
+#button{
+    /*height: 20px;*/
+    /*width: 1000px;*/
+    
+    
+}
+#fordit{
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 50px);
+}
+#copy{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+body{
+    background-image: linear-gradient(to bottom right, #00d4ff,#090979, #020024);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

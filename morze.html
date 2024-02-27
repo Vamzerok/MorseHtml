@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morze</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="morze.css">
+    <script src="morze.js"></script>
+</head>
+<body>
+    <div id="cim"><h1>Morze kód fordító</h1></div>
+    
+    <div id="fordito">
+        <div id="text" contenteditable="true" onkeypress="enter(event)" onclick="startType()"></div>
+        <div id ="button">
+            <button id="fordit" onclick="convertToMorse()">Fordít</button><!--converter button-->
+            <button id="copy" onclick="copy()" title="copy morse code">&#128464</button>
+        </div>
+        <div id="morse">Morze kód:</div>
+    </div>
+
+    <script>
+        function setTranslateDiv(){
+            // window size
+            const h = window.innerHeight
+            const w = window.innerWidth
+
+            // div
+            const divH = h/2
+            const divW = w / 1.5
+
+            const div = document.getElementById('fordito')
+            
+            const divPosH = (h / 2) - (divH / 2) + 'px'
+            const divPosW = (w / 2) - (divW / 2) + 'px'
+
+           // div.style.backgroundColor= 'green'
+            div.style.top = divPosH
+            div.style.left =  divPosW
+            div.style.height = divH + 'px'
+            div.style.width = divW + 'px'
+
+            // text
+
+            console.log(divPosH, divPosW)
+            const text = document.getElementById('text')
+            text.style.height = divH / 2 - 50 + 'px'
+            
+            console.log((divPosH / 2) - 25 + 'px')
+            
+
+
+
+            // button
+            /*
+            const fordit = document.getElementById('fordit')
+            fordit.style.top = 50 + '%'
+            fordit.style.left = 50 + '%'  */
+
+            //morse
+        }
+
+
+
+        var ran = false
+        function inputDiv(){
+            const text = document.getElementById('text')
+            text.innerText = "Kattints a szöveg beírásához!"
+            console.log(ran)/*
+            if(ran === false){
+                console.log(ran)
+                text.addEventListener('click', () =>{
+                text.innerText = ''
+                ran = true
+                console.log(ran)
+                
+            })}*/
+        
+        }
+        function startType(){
+            const text = document.getElementById('text')
+            text.innerText = ""
+            text.removeAttribute('onclick')
+        }
+        
+        
+
+
+        setTranslateDiv()
+        inputDiv()
+
+        window.addEventListener('resize', setTranslateDiv)
+    </script>
+
+    
+</body>
+</html>
