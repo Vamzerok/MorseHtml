@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="icon" href="icon.png">
+  <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="cover.css" rel="stylesheet">
+    
+    <script src="morze.js"></script>
+
+  <title>Morze</title>
+</head>
+<body class="text-center">
+  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+
+    <!-- Header -->
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Morze</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="translate.html">Fordító</a>
+          <a class="nav-link" href="info.html">Információ</a>
+        </nav>
+      </div>
+    </header>
+
+    <!--Forditóóóóó-->
+    <div class="container">
+    <div class="row">
+
+        <!--bal oldali oszlop-->
+        <div class="col-lg-5" class="bevitel">
+            <!--ide irjak a szoveget a kliensek //average fullstack communication-->
+            <div id="text" contenteditable="true" onkeypress="enter(event)" onclick="startType()" onchange="convertToMorseOnchange()"></div>
+        </div>
+
+
+        <!--kozepso gombos oszlop mert-->
+        <div class="col-lg-2">
+            <button id="fordit" onclick="convertToMorse()">Fordít</button><!--converter button-->
+            <button id="copy" onclick="copy()" title="copy morse code">&#128464</button>
+        </div>
+
+
+        <!--jobb oldali oszlop-->
+        <div class="col-lg-5">
+            <!--Itt kene megjelennie-->
+            <div id="morse">Morze kód:</div>
+        </div>
+    </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Készítők <br>Varga Dávid (Cigi) | Verhás Gergő🧏‍♂️ | Császár Bálint</p>
+      </div>
+    </footer>
+
+  </div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster --> 
+
+  <!--kell hogy mukodjon 🧏‍♂️-->
+  <script>
+    /*
+    function setTranslateDiv(){
+            // window size
+            const h = window.innerHeight
+            const w = window.innerWidth
+
+            // div
+            const divH = h/2
+            const divW = w / 1.5
+
+            const div = document.getElementById('fordito')
+            
+            const divPosH = (h / 2) - (divH / 2) + 'px'
+            const divPosW = (w / 2) - (divW / 2) + 'px'
+
+           // div.style.backgroundColor= 'green'
+            div.style.top = divPosH
+            div.style.left =  divPosW
+            div.style.height = divH + 'px'
+            div.style.width = divW + 'px'
+
+            // text
+
+            console.log(divPosH, divPosW)
+            const text = document.getElementById('text')
+            text.style.height = divH / 2 - 50 + 'px'
+            
+            console.log((divPosH / 2) - 25 + 'px')
+            
+
+
+
+            // button
+            
+            const fordit = document.getElementById('fordit')
+            fordit.style.top = 50 + '%'
+            fordit.style.left = 50 + '%'  
+
+            //morse
+    }*/
+
+
+
+        var ran = false
+        function inputDiv(){
+            const text = document.getElementById('text')
+            text.innerText = "Kattints a szöveg beírásához!"
+            console.log(ran)/*
+            if(ran === false){
+                console.log(ran)
+                text.addEventListener('click', () =>{
+                text.innerText = ''
+                ran = true
+                console.log(ran)
+                
+            })}*/
+        
+        }
+        function startType(){
+            const text = document.getElementById('text')
+            text.innerText = ""
+            text.removeAttribute('onclick')
+        }
+
+        
+        
+        
+
+
+        setTranslateDiv()
+        inputDiv()
+
+        window.addEventListener('resize', setTranslateDiv)
+  </script>
+</body>
+</html>
